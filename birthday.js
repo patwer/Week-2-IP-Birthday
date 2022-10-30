@@ -22,10 +22,44 @@ console.log(title);
 const elementDOB=document.getElementById('dobirth');
 const dobirth=String(elementDOB.value);
 console.log(dobirth);
+
+ //dateofbirth array split based on /
+ const dobArray=String(dobirth).split("-");
+ //index0 - year
+const year_of_birth=dobArray[0];
+ //index1 - month
+ const month=dobArray[1];
+ //index2 - day of month
+ const calendar_day=dobArray[2];
+
+
+
+//split year of birth to century and year identifier
+//const year_det =year_of_birth.split();
+const century =Number(year_of_birth.slice(0,2));
+const year_digit=Number(year_of_birth.slice(2));
+console.log(century);
+console.log(year_digit);
+//formula for day of week
+//guide: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+//d_o_week = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+//CC - is the century digits. For example 1989 has CC = 19, YY - is the Year digits (1989 has YY = 89), MM -  is the Month
+//DD - is the Day of the month and mod - is the modulus function ( % )
+const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month+1)/10)) + calendar_day )%7;
+//const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month+1)/10)) + calendar_day );
+//const modnum=16%7;
+//to pick the first digit only
+//const rem_int=Number(d_o_week.slice(0,1));
+//console.log(rem_int);
+console.log(d_o_week);
 //instantiate array
 
 //response from function
-
+//return(
+    //window.alert(dobirth);
+   // window.alert(`As you were born on a${dobirth}`);
+   window.alert(`As you were born on a ${dobirth} your Akan name is ${lname}`);
+//window.alert("As you were born on a"+dobirth+"your Akan name is" lname);
 
 }
 
