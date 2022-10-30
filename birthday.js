@@ -17,11 +17,6 @@ const elementLastName=document.getElementById('lname');
 const lname=String(elementLastName.value);
 console.log(lname);
 
-//Title
-const elementTitle=document.getElementById('title');
-const title=String(elementTitle.value);
-console.log(title);
-
 //Date of birth
 const elementDOB=document.getElementById('dobirth');
 const dobirth=String(elementDOB.value);
@@ -79,13 +74,5 @@ const myFemaleName=array_female_names[day_o_week];
 console.log(myFemaleName);
 window.alert(`As you were born on a ${day_of_the_week} your Akan name is ${myFemaleName}`);
 }
-
-
-//response from function
-//return(
-    //window.alert(dobirth);
-   // window.alert(`As you were born on a${dobirth}`);
-  // window.alert(`As you were born on a ${day_of_the_week} your Akan name is ${lname}`);
-//window.alert("As you were born on a"+dobirth+"your Akan name is" lname);
 
 }
