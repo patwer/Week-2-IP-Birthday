@@ -3,7 +3,8 @@
 
 <head>
     <title>Akan Names</title>
-   <!--<link href="style.css" rel="stylesheet">--> 
+    <!-- CSS -->
+   <link href="index.css" rel="stylesheet"> 
   <!--Link html to js-->
   <script src="birthday.js" defer></script>
 </head>
@@ -16,27 +17,29 @@
         Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
     <h2>Hello, let's try this </h2>
     <p>...but first, let us know some details about you</p>
-    
+
     <!-- Form to take input -->
          <form>   
+            <!-- <form action="/birthday.js"  onclick="calendar_dates()">    -->
           <!-- Gender -->
-          <label for="gender">Gender</label>
+          <label for="gender">Gender</label><br>
           <select name="gender" id="gender">
               <option value="male">Male</option>
               <option value="female">Female</option>
              </select>
-            <br>
+            <br><br>
           <!--Names-->
-        <label>Enter your first name</label>
-        <input type="text" placeholder="first name" id="fname" required ></input><br>
-        <label>Enter your last name</label>
-        <input type="text" placeholder="last name" id="lname" required></input><br>
+        <label>Enter your first name</label><br>
+        <input type="text" placeholder="first name" id="fname" required ></input><br><br>
+        <label>Enter your last name</label><br>
+        <input type="text" placeholder="last name" id="lname" required></input><br><br>
 
         <!--Date of birth-->
-        <label>Enter your date of birth</label>
+        <label>Enter your date of birth</label><br>
         <input type="date" id="dobirth" required></input><br><br>
        <!--click show to present Akan name, if fields empty prompt-->
-       <input type="submit" value="Reveal my name" onclick="calendar_dates()">
+       <input type="submit" value="Show my Akan name" onclick="calendar_dates()">
+       <!-- <input type="submit" value="Show my Akan name" onclick="calendar_dates()">  -->
     </form>
-
+<dialog id="res_dialog">hh</dialog>
 </body>
