@@ -49,29 +49,29 @@ const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month
 //const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month+1)/10)) + calendar_day );
 //const modnum=16%7;
 //to pick the first digit only
-//const rem_int=Number(d_o_week.slice(0,1));
+day_o_week=Math.trunc(d_o_week);
 //console.log(rem_int);
-console.log(d_o_week);
+console.log(day_o_week);
 //instantiate array
 
 //check for day of week
 const array_day_of_week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const day_of_the_week=array_day_of_week[2];
+const day_of_the_week=array_day_of_week[day_o_week];
 console.log(day_of_the_week);
 //if male
 const array_male_names=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
-const myMaleName=array_male_names[2];
+const myMaleName=array_male_names[day_o_week];
 console.log(myMaleName);
 //if female
 const array_female_names=['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
-const myFemaleName=array_female_names[2];
+const myFemaleName=array_female_names[day_o_week];
 console.log(myFemaleName);
 
 //response from function
 //return(
     //window.alert(dobirth);
    // window.alert(`As you were born on a${dobirth}`);
-   window.alert(`As you were born on a ${dobirth} your Akan name is ${lname}`);
+   window.alert(`As you were born on a ${day_of_the_week} your Akan name is ${lname}`);
 //window.alert("As you were born on a"+dobirth+"your Akan name is" lname);
 
 }
