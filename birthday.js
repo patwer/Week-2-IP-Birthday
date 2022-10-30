@@ -54,6 +54,19 @@ const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month
 console.log(d_o_week);
 //instantiate array
 
+//check for day of week
+const array_day_of_week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const day_of_the_week=array_day_of_week[2];
+console.log(day_of_the_week);
+//if male
+const array_male_names=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
+const myMaleName=array_male_names[2];
+console.log(myMaleName);
+//if female
+const array_female_names=['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
+const myFemaleName=array_female_names[2];
+console.log(myFemaleName);
+
 //response from function
 //return(
     //window.alert(dobirth);
