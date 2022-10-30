@@ -17,7 +17,7 @@
     <p>...but first, let us know some details about you</p>
     <!-- <form action="onclick="akan_name()"> -->
         <!-- <form onclick="day_of_week(document.getElementById('dobirth').value)"></form> -->
-         <form onclick="calendar_dates()">
+         <form>
     <!-- <form > -->
         <label for="Title">Title</label>
         <select name="Title" id="title">
@@ -32,6 +32,13 @@
           <label>Please input title if selected Other above</label>
           <input type="text" placeholder="Title" ></input><br>
 
+          <!-- Gender -->
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender">
+              <option value="nale">Male</option>
+              <option value="female">Female</option>
+             </select>
+            <br>
           <!--Names-->
         <label>Enter your first name</label>
         <input type="text" placeholder="first name" id="fname" required ></input><br>
@@ -42,7 +49,7 @@
         <label>Enter your date of birth</label>
         <input type="date" id="dobirth" required></input><br><br>
        <!--click show to present Akan name, if fields empty prompt-->
-       <input type="submit" value="Reveal my name" >
+       <input type="submit" value="Reveal my name" onclick="calendar_dates()">
     </form>
 
  
