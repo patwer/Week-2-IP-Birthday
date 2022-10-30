@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(138, 214, 138);
+}
+p {
+    font: oblique;
+    text-align: center;
+}
+h2 {   
+    text-align: center;
+}
+form {   
+    text-align: center;
+}
