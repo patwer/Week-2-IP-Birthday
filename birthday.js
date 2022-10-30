@@ -64,7 +64,7 @@ if (gender=="male")
 const array_male_names=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
 const myMaleName=array_male_names[day_o_week];
 console.log(myMaleName);
-window.alert(`${fname} ${lname} as you were born on a ${day_of_the_week} your Akan name is ${myMaleName}`);
+window.alert(`${fname} ${lname}, as you were born on a ${day_of_the_week} your Akan name is ${myMaleName}`);
 }
 else if(gender=="female")
 {
@@ -72,7 +72,7 @@ else if(gender=="female")
 const array_female_names=['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
 const myFemaleName=array_female_names[day_o_week];
 console.log(myFemaleName);
-window.alert(`${fname} ${lname} as you were born on a ${day_of_the_week} your Akan name is ${myFemaleName}`);
+window.alert(`${fname} ${lname}, as you were born on a ${day_of_the_week} your Akan name is ${myFemaleName}`);
 }
 
 }
