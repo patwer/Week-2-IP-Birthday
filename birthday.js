@@ -1,11 +1,13 @@
 //function to pick the date from input date of birth and map to Akan name
 const calendar_dates=()=>
 {
+
 //get values from form elements
 //gender
 const elementGender=document.getElementById('gender');
 const gender=String(elementGender.value);
 console.log(gender);
+
 
 //first name
 const elementFirstName=document.getElementById('fname');
@@ -22,6 +24,12 @@ const elementDOB=document.getElementById('dobirth');
 const dobirth=String(elementDOB.value);
 console.log(dobirth);
 
+if (fname=="" || lname=="" ||dobirth==""){
+    window.alert("Enter all required details");
+
+}
+else
+{
  //dateofbirth array split based on /
  const dobArray=String(dobirth).split("-");
  //index0 - year
@@ -46,7 +54,7 @@ console.log(year_digit);
 //DD - is the Day of the month and mod - is the modulus function ( % )
 const d_o_week=( ( (century/4) -2*century-1) + ((5*year_digit/4) ) + ((26*(month+1)/10)) + calendar_day )%7;
 
-//to pick the int part only
+//work around to pick the int part only, formula above gives a float
 day_o_week=Math.trunc(d_o_week);
 
 
@@ -65,6 +73,9 @@ const array_male_names=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
 const myMaleName=array_male_names[day_o_week];
 console.log(myMaleName);
 window.alert(`${fname} ${lname}, as you were born on a ${day_of_the_week} your Akan name is ${myMaleName}`);
+
+//window.alert(`${fname} ${lname}, as you were born on a ${day_of_the_week} your Akan name is ${myMaleName}`);
+
 }
 else if(gender=="female")
 {
@@ -72,7 +83,11 @@ else if(gender=="female")
 const array_female_names=['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
 const myFemaleName=array_female_names[day_o_week];
 console.log(myFemaleName);
+//const output=fname+" "+lname+ "as you were born on a ${day_of_the_week} your Akan name is" +myFemaleName;
+//console.log(output);
 window.alert(`${fname} ${lname}, as you were born on a ${day_of_the_week} your Akan name is ${myFemaleName}`);
+
+}
 }
 
 }
