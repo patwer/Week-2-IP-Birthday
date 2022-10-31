@@ -19,8 +19,9 @@
     <p>...but first, let us know some details about you</p>
 
     <!-- Form to take input -->
-         <form>   
-            <!-- <form action="/birthday.js"  onclick="calendar_dates()">    -->
+         <!-- <form  onclick="calendar_dates()">    -->
+            <!-- <form action="calendar_dates()">    -->
+                <form>
           <!-- Gender -->
           <label for="gender">Gender</label><br>
           <select name="gender" id="gender">
@@ -38,8 +39,10 @@
         <label>Enter your date of birth</label><br>
         <input type="date" id="dobirth" required></input><br><br>
        <!--click show to present Akan name, if fields empty prompt-->
-       <input type="submit" value="Show my Akan name" onclick="calendar_dates()">
-       <!-- <input type="submit" value="Show my Akan name" onclick="calendar_dates()">  -->
+       <!-- <input type="submit" value="Show my Akan name" onclick="calendar_dates()"> -->
+        <input type="submit" onclick="calendar_dates()"> 
+       <!-- <input type="submit">  -->
     </form>
+    <!-- <input type="submit" value="Show my Akan name" onclick="calendar_dates()"> -->
 <dialog id="res_dialog">hh</dialog>
 </body>
